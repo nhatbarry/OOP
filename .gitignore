@@ -9,3 +9,4 @@ lib
 .json
 *.vscode
 *.pdf
+/lab1/target/
