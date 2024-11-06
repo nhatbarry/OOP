@@ -11,3 +11,5 @@ lib
 *.pdf
 /lab1/target/
 /exkethua/nbproject/private/
+/kethua/nbproject/private/
+/kethua/build/
