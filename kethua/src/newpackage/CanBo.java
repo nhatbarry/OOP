@@ -4,6 +4,8 @@
  */
 package newpackage;
 
+import java.util.Scanner;
+
 /**
  *
  * @author nhatb
@@ -14,37 +16,58 @@ public class CanBo {
     private String gioitinh;
     private String diachi;
 
-    
 
-    public CanBo(String hoten, int namsinh, String gioitinh, String diachi) {
-        this.hoten = hoten;
-        this.namsinh = namsinh;
-        this.gioitinh = gioitinh;
-        this.diachi = diachi;
-    }
+
     public String getHoten() {
         return hoten;
     }
+
     public void setHoten(String hoten) {
         this.hoten = hoten;
     }
+
     public int getNamsinh() {
         return namsinh;
     }
+
     public void setNamsinh(int namsinh) {
         this.namsinh = namsinh;
     }
+
     public String getGioitinh() {
         return gioitinh;
     }
+
     public void setGioitinh(String gioitinh) {
         this.gioitinh = gioitinh;
     }
+
     public String getDiachi() {
         return diachi;
     }
+
     public void setDiachi(String diachi) {
         this.diachi = diachi;
     }
-    
+
+    public void nhap() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap ho ten:");
+        hoten = sc.nextLine();
+        System.out.println("Nhap nam sinh:");
+        namsinh = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Nhap gioi tinh:");
+        gioitinh = sc.nextLine();
+        System.out.println("Nhap dia chi:");
+        diachi = sc.nextLine();
+    }
+
+    public void xuat() {
+        System.out.println("Ho ten:" + hoten);
+        System.out.println("Nam sinh:" + namsinh);
+        System.out.println("Gioi tinh:" + gioitinh);
+        System.out.println("Dia chi:" + diachi);
+    }
+
 }

@@ -4,17 +4,16 @@
  */
 package newpackage;
 
+import java.util.Scanner;
+
 /**
  *
  * @author nhatb
  */
-public class CongNhan extends CanBo{
+public class CongNhan extends CanBo {
     private String Bac;
 
-    public CongNhan(String hoten, int namsinh, String gioitinh, String diachi, String bac) {
-        super(hoten, namsinh, gioitinh, diachi);
-        Bac = bac;
-    }
+
 
     public String getBac() {
         return Bac;
@@ -29,5 +28,17 @@ public class CongNhan extends CanBo{
         return "CongNhan - Bac" + getBac() + ", Ho va ten: " + getHoten() + ", Nam sinh: " + getNamsinh()
                 + ", gioi tinh: " + getGioitinh() + ", dia chi: " + getDiachi();
     }
-    
+
+    public void nhap() {
+        super.nhap();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap bac:");
+        Bac = sc.nextLine();
+    }
+
+    public void xuat() {
+        super.xuat();
+        System.out.println("Bac:" + Bac);
+    }
+
 }

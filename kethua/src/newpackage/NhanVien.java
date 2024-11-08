@@ -4,6 +4,8 @@
  */
 package newpackage;
 
+import java.util.Scanner;
+
 /**
  *
  * @author nhatb
@@ -11,10 +13,7 @@ package newpackage;
 public class NhanVien extends CanBo {
     private String congviec;
 
-    public NhanVien(String hoten, int namsinh, String gioitinh, String diachi, String congviec) {
-        super(hoten, namsinh, gioitinh, diachi);
-        this.congviec = congviec;
-    }
+
 
     public String getCongviec() {
         return congviec;
@@ -28,6 +27,18 @@ public class NhanVien extends CanBo {
     public String toString() {
         return "NhanVien - Ho va ten: " + getHoten() + ", Cong viec: " + getCongviec() + ", Nam sinh: "
                 + getNamsinh() + ", gioi tinh: " + getGioitinh() + ", dia chi: " + getDiachi();
+    }
+
+    public void nhap() {
+        super.nhap();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap cong viec:");
+        congviec = sc.nextLine();
+    }
+
+    public void xuat() {
+        super.xuat();
+        System.out.println("Bac:" + congviec);
     }
 
 }

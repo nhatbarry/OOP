@@ -4,6 +4,8 @@
  */
 package newpackage;
 
+import java.util.Scanner;
+
 /**
  *
  * @author nhatb
@@ -11,10 +13,7 @@ package newpackage;
 public class KySu extends CanBo {
     private String nganh;
 
-    public KySu(String hoten, int namsinh, String gioitinh, String diachi, String nganh) {
-        super(hoten, namsinh, gioitinh, diachi);
-        this.nganh = nganh;
-    }
+
 
     @Override
     public String toString() {
@@ -28,6 +27,18 @@ public class KySu extends CanBo {
 
     public void setNganh(String nganh) {
         this.nganh = nganh;
+    }
+
+    public void nhap() {
+        super.nhap();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap nganh:");
+        nganh = sc.nextLine();
+    }
+
+    public void xuat() {
+        super.xuat();
+        System.out.println("Bac:" + nganh);
     }
 
 }
