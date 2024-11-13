@@ -10,41 +10,42 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        ArrayList<CanBo> arr = new ArrayList<>();
+        ArrayList<ThiSinh> arr = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-        System.out.print("Nhap so can bo can them: ");
+        System.out.print("Nhap so thi sinh can them: ");
         int n = sc.nextInt();
         sc.nextLine();
         System.out.println();
         // nhap ttin moi cho can bo
         for(int i = 1; i <= n; i++){
-            System.out.println("nhap thong tin nguoi thu " + i);
-            System.out.printf("Can bo can them lam chuc vu j:\n1. Cong nhan\n2. Ky su\n3. Nhan vien\n");
-            n = sc.nextInt();
+            System.out.println("nhap thong tin thi sinh thu " + i);
+            System.out.printf("Thi sinh can them thi khoi nao:\n1. A\n2. B\n3. C\n");
+            int c = sc.nextInt();
             sc.nextLine();
-            switch (n) {
+            ThiSinh ts;
+            switch (c) {
                 case 1:
-                    CongNhan cn = new CongNhan();
-                    cn.nhap();
-                    arr.add(cn);
+                    ts = new KhoiA();
+                    ts.nhap();
+                    arr.add(ts);
                     break;
                 case 2:
-                    KySu ks = new KySu();
-                    ks.nhap();
-                    arr.add(ks);
+                    ts = new KhoiB();
+                    ts.nhap();
+                    arr.add(ts);
                 case 3:
-                    NhanVien nv = new NhanVien();
-                    nv.nhap();
-                    arr.add(nv);
+                    ts = new KhoiC();
+                    ts.nhap();
+                    arr.add(ts);
             }
         }
 
         //tim kiem
         do {
-            System.out.print("nhap ten can bo can tim: ");
+            System.out.print("nhap sbd thi sinh can tim: ");
             String tim = sc.nextLine();
             for (int i = 0; i < arr.size(); i++) {
-                if (arr.get(i).getHoten().equals(tim)) {
+                if (arr.get(i).getSoBaoDanh().equals(tim)) {
                     arr.get(i).xuat();
                 }
             }
@@ -56,9 +57,9 @@ public class Main {
         } while (true);
 
         //xuat ttin
-        System.out.printf("Thong tin tat ca can bo:\n\n");
-        for (CanBo cb : arr){
-            cb.xuat();
+        System.out.printf("Thong tin tat ca thi sinh:\n\n");
+        for (ThiSinh ts : arr){
+            ts.xuat();
             System.out.printf("\n\n\n");
         }
 
