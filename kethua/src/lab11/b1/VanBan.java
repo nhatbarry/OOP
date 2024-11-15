@@ -19,7 +19,7 @@ public class VanBan {
     }
     
     public int demSoTu(){
-        return 0;
+        return st.length();
     }
 
     public int demSoH(){
