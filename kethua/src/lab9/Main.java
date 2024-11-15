@@ -17,7 +17,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap so hoc sinh can them: ");
         int n = Integer.parseInt(sc.nextLine());
-        for (int i = 0; i <= n; i++){
+        for (int i = 0; i < n; i++){
             System.out.println("Nhap hoc sinh thu " + (i + 1));
             HoSoHocSinh hso = new HoSoHocSinh();
             hso.nhap();
