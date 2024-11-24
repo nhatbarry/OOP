@@ -7,7 +7,7 @@ import lab92.*;
 public class Main {
     public static void main(String[] args) {
 
-        MyStack stack = new MyStack();
+        MyStack2 stack = new MyStack2();
         stack.push(1);
         stack.push(2);
         stack.push("ba");
