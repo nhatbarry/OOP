@@ -8,11 +8,30 @@ public class Person {
     private String diachi;
     private String gioitinh;
     
+    public Person() {
+    }
+
     public Person(String hoten, String ngaysinh, String diachi, String gioitinh) {
         this.hoten = hoten;
         this.ngaysinh = ngaysinh;
         this.diachi = diachi;
         this.gioitinh = gioitinh;
+    }
+
+    public String getHoten() {
+        return hoten;
+    }
+
+    public String getNgaysinh() {
+        return ngaysinh;
+    }
+
+    public String getDiachi() {
+        return diachi;
+    }
+
+    public String getGioitinh() {
+        return gioitinh;
     }
 
     public void nhap(){

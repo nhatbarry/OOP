@@ -8,6 +8,11 @@ public class NhanVien extends Person{
     private int thamnien;
     private int luongcoban;
 
+    
+
+    public NhanVien() {
+    }
+
     public NhanVien(String hoten, String ngaysinh, String diachi, String gioitinh, String phongban, double hesoluong,
             int thamnien, int luongcoban) {
         super(hoten, ngaysinh, diachi, gioitinh);
@@ -15,6 +20,23 @@ public class NhanVien extends Person{
         this.hesoluong = hesoluong;
         this.thamnien = thamnien;
         this.luongcoban = luongcoban;
+    }
+
+
+    public String getPhongban() {
+        return phongban;
+    }
+
+    public double getHesoluong() {
+        return hesoluong;
+    }
+
+    public int getThamnien() {
+        return thamnien;
+    }
+
+    public int getLuongcoban() {
+        return luongcoban;
     }
 
     public void nhap(){

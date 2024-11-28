@@ -1,10 +1,13 @@
 package kma.btvn;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 public class Utils {
@@ -53,8 +56,37 @@ public class Utils {
         return list;
     }
 
-    public static void ghi(String path){
-        
+    public static void ghi(String path, int mode){
+        NhanVien nv = new NhanVien();
+        nv.nhap();
+        FileOutputStream fos = null;
+        BufferedWriter bw = null;
+        try {
+            fos = new FileOutputStream(path);
+            bw = new BufferedWriter(new OutputStreamWriter(fos));
+            String data = nv.getHoten() + "$" + nv.getNgaysinh() + "$" 
+                + nv.getDiachi() + "$" + nv.getGioitinh() + "$" + nv.getPhongban() 
+                    + "$" + nv.getHesoluong() + "$" + nv.getThamnien() + "$" + nv.getLuongcoban();
+            if (mode == 2) {
+                bw.append(data);
+            }
+            else if (mode == 1){
+                bw.write(data);
+            }
+        } catch (Exception e) {
+            System.out.println("sai roi");
+        } finally {
+            try {
+                if (bw != null) {
+                    bw.close();
+                }
+                if (fos != null) {
+                    fos.close();
+                }
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
 }
