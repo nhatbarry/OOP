@@ -18,7 +18,9 @@ public class Main{
                     System.out.println();
                     System.out.println("DS nhan vien");
                     for (NhanVien nhanVien : list) {
+                        System.out.println();
                         nhanVien.xuat();
+                        System.out.println();
                     }
                     break;
 
