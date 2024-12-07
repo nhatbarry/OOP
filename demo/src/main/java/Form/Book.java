@@ -54,6 +54,4 @@ public class Book implements Serializable{
     public void setCategory(String category) {
         this.category = category;
     }
-    //tét laii
-
 }
