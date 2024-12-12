@@ -22,6 +22,23 @@ public class NhanVien extends Person{
         this.luongcoban = luongcoban;
     }
 
+    
+
+    public void setPhongban(String phongban) {
+        this.phongban = phongban;
+    }
+
+    public void setHesoluong(double hesoluong) {
+        this.hesoluong = hesoluong;
+    }
+
+    public void setThamnien(int thamnien) {
+        this.thamnien = thamnien;
+    }
+
+    public void setLuongcoban(int luongcoban) {
+        this.luongcoban = luongcoban;
+    }
 
     public String getPhongban() {
         return phongban;

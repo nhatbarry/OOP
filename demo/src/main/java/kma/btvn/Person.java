@@ -18,6 +18,24 @@ public class Person {
         this.gioitinh = gioitinh;
     }
 
+    
+
+    public void setHoten(String hoten) {
+        this.hoten = hoten;
+    }
+
+    public void setNgaysinh(String ngaysinh) {
+        this.ngaysinh = ngaysinh;
+    }
+
+    public void setDiachi(String diachi) {
+        this.diachi = diachi;
+    }
+
+    public void setGioitinh(String gioitinh) {
+        this.gioitinh = gioitinh;
+    }
+
     public String getHoten() {
         return hoten;
     }

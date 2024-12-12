@@ -56,9 +56,8 @@ public class Utils {
         return list;
     }
 
-    public static void ghi(String path, int mode){
-        NhanVien nv = new NhanVien();
-        nv.nhap();
+    public static void ghi(String path, NhanVien a){
+        NhanVien nv = a;
         FileOutputStream fos = null;
         BufferedWriter bw = null;
         try {
@@ -67,12 +66,7 @@ public class Utils {
             String data = nv.getHoten() + "$" + nv.getNgaysinh() + "$" 
                 + nv.getDiachi() + "$" + nv.getGioitinh() + "$" + nv.getPhongban() 
                     + "$" + nv.getHesoluong() + "$" + nv.getThamnien() + "$" + nv.getLuongcoban();
-            if (mode == 2) {
-                bw.append(data);
-            }
-            else if (mode == 1){
-                bw.write(data);
-            }
+            bw.append(data);
         } catch (Exception e) {
             System.out.println("sai roi");
         } finally {

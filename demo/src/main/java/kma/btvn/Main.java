@@ -27,7 +27,6 @@ public class Main{
                 case 2:
                     System.out.printf("1. Ghi de\n2.Ghi tiep vao file\n");
                     int d = Integer.parseInt(sc.nextLine());
-                    Utils.ghi(path, d);
                     break;
                 default:
                     break;
